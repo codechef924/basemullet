@@ -372,37 +372,37 @@ function dt(e, o, n, g, u, a) {
           ],
           2
         ),
-        t("div", ct, [
-          e.isConnected
-            ? (l(),
-              C(
-                w,
-                {
-                  key: 1,
-                  onClick: e.disconnect,
-                  text: "Disconnect Wallet",
-                  icon: "connect",
-                  class: "bg-pink button-effect",
-                },
-                null,
-                8,
-                ["onClick"]
-              ))
-            : (l(),
-              C(
-                w,
-                {
-                  key: 0,
-                  onClick: e.init,
-                  text: "Connect Wallet",
-                  icon: "connect",
-                  class: "bg-lightBlue button-effect",
-                },
-                null,
-                8,
-                ["onClick"]
-              )),
-        ]),
+        // t("div", ct, [
+        //   e.isConnected
+        //     ? (l(),
+        //       C(
+        //         w,
+        //         {
+        //           key: 1,
+        //           onClick: e.disconnect,
+        //           text: "Disconnect Wallet",
+        //           icon: "connect",
+        //           class: "bg-pink button-effect",
+        //         },
+        //         null,
+        //         8,
+        //         ["onClick"]
+        //       ))
+        //     : (l(),
+        //       C(
+        //         w,
+        //         {
+        //           key: 0,
+        //           onClick: e.init,
+        //           text: "Connect Wallet",
+        //           icon: "connect",
+        //           class: "bg-lightBlue button-effect",
+        //         },
+        //         null,
+        //         8,
+        //         ["onClick"]
+        //       )),
+        // ]),
       ],
       2
     )
@@ -1276,8 +1276,8 @@ function uo(e, o, n, g, u, a) {
                 d,
                 {
                   image: "holders",
-                  name: `${e.tokenSymbol} Holders`,
-                  amount: e.totalHolders,
+                  name: `Total Supply`,
+                  amount: "1 billion",
                   class: "bg-yellow",
                 },
                 null,
@@ -1288,8 +1288,8 @@ function uo(e, o, n, g, u, a) {
                 d,
                 {
                   image: "market-cap",
-                  name: "Market Cap",
-                  amount: `$${e.tokenMarketCapUSDFormatted}`,
+                  name: "Tax",
+                  amount: `0%`,
                   class: "bg-blue",
                   white: "",
                 },
@@ -1301,8 +1301,8 @@ function uo(e, o, n, g, u, a) {
                 d,
                 {
                   image: "eth",
-                  name: "Total Rewards",
-                  amount: `$${e.totalRewardsUSDFormatted}`,
+                  name: "LP",
+                  amount: `BURNT`,
                   class: "bg-green",
                 },
                 null,
@@ -1313,8 +1313,8 @@ function uo(e, o, n, g, u, a) {
                 d,
                 {
                   image: "locked",
-                  name: `${e.tokenSymbol} Locked`,
-                  amount: e.tokensLockedFormatted,
+                  name: `RENOUNCED`,
+                  amount: "OwnerShip",
                   class: "bg-darkPink",
                   white: "",
                 },
@@ -1469,20 +1469,36 @@ function uo(e, o, n, g, u, a) {
                       ],
                       64
                     ))
-                  : (l(),
-                    C(
-                      _,
+                  // : (l(),
+                  //   C(
+                  //     _,
+                  //     {
+                  //       key: 1,
+                  //       onClick: "https://app.uniswap.org/",
+                  //       text: "BUY MULLET",
+                  //       size: "large",
+                  //       class: "bg-lightBlue canaro-black",
+                  //       icon: "collect",
+                  //     },
+                  //     null,
+                  //     8,
+                  //     ["onClick"]
+                  //   ))
+                    :(l(),
+                    r(
+                      "a",
                       {
-                        key: 1,
-                        onClick: e.init,
-                        text: "Connect Wallet",
-                        size: "large",
-                        class: "bg-lightBlue canaro-black",
+                        key: 0,
+                        href: "https://app.uniswap.org/",
+                        target: "_blank",
+                        text: "BUY MULLET",
+                        rel: "noopener noreferrer",
+                        class: "bg-lightBlue canaro-black mystyle",
                         icon: "collect",
                       },
                       null,
-                      8,
-                      ["onClick"]
+                      9,
+                      it
                     )),
                 t("span", so, [
                   y(
@@ -2625,7 +2641,7 @@ function Js(e, o, n, g, u, a) {
                   },
                   [
                     i(d, {
-                      text: "Whitepaper",
+                      text: "BUY",
                       size: "large",
                       class: "bg-blue canaro-black",
                     }),
@@ -2807,7 +2823,7 @@ function kl(e, o, n, g, u, a) {
                       reverse: "",
                       white: "",
                     },
-                    null,
+                    1000000000000,
                     8,
                     ["amount"]
                   ),
